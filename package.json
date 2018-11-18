@@ -1,9 +1,12 @@
 {
   "name": "fh-components",
   "version": "0.1.0",
+  "main": "src/components/index.js",
+  "homepage": "https://imeneses1989.github.io/fh-components/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.1.0",
+    "@storybook/addon-actions": "^4.0.7",
     "@svgr/webpack": "2.4.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
@@ -53,10 +56,28 @@
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "3.6.3"
   },
+  "author": {
+    "name": "Irina Valdes",
+    "email": "valdem.irina@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imeneses1989/fh-components"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "toolkit",
+    "library"
+  ],
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -s public",
+    "deploy-storybook": "storybook-to-ghpages",
+    "postversion": "git push && git push --tags"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -112,5 +133,11 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-knobs": "^4.0.7",
+    "@storybook/addon-storysource": "^4.0.7",
+    "@storybook/react": "^4.0.7",
+    "@storybook/storybook-deployer": "^2.3.0"
   }
 }

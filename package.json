@@ -9,7 +9,6 @@
   "files": [
     "lib"
   ],
-  "private": true,
   "dependencies": {
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",

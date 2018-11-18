@@ -9,4 +9,4 @@ npm install fh-components
 ```
 
 # Documentation
-[Components Documentation](https://github.com/imeneses1989/fh-components)
+[Components Documentation](https://imeneses1989.github.io/fh-components/)

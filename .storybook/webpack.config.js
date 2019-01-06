@@ -6,7 +6,7 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 module.exports = {
     resolve: {
         alias: {
-            'fh-components': path.resolve(__dirname, '../src/components')
+            'fht-components': path.resolve(__dirname, '../src/components')
         }
     },
     module: {
@@ -26,8 +26,8 @@ module.exports = {
             include: path.resolve(__dirname, "../src")
         },
         {
-            test:/\.svg$/,
-            loader: 'raw-loader'
+            test: /\.svg$/,
+            loader: 'svg-sprite-loader'
         },
         {
             test: /\.(js|jsx)$/,

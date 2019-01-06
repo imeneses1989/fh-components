@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* Colors */
+$primary: #6200EE;
+$primary-variant: #3700B3;
+$secondary: #03DAC6;
+$secondary-variant: #018786;
+
+$background: #FFFFFF;
+$surface: #FFFFFF;
+$error: #B00020;
+
+$on-primary: #FFFFFF;
+$on-secondary: #000000;
+$on-background: #000000;
+$on-surface: #000000;
+$on-error: #FFFFFF;
+
+$border-color: #E0E0E0;
+
+
+/* Fonts */
+$font-family: 'Roboto', sans-serif;
+$family-monospace: monospace !default;
+$render-mode: optimizeLegibility !default;
+
+$size-small: 0.5rem !default;
+$size-medium: 0.75rem !default;
+$size-large: 1.25rem !default;
+$size-1: 3rem !default;
+$size-2: 2.5rem !default;
+$size-3: 2rem !default;
+$size-4: 1.5rem !default;
+$size-5: 1.25rem !default;
+$size-6: 1rem !default;
+$size-7: 0.75rem !default;
+
+$weight-light: 300 !default;
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;
+
+/* Grid - Review if keeping*/
+$gutter-sm: 15px;
+$gutter-md: 18px;
+$gutter-lg: 20px;
+
+$margin-sm: 15px;
+$margin-md: 18px;
+$margin-lg: 20px;
+
+/* Miscellaneous */
+$easing: ease-out !default;
+$radius-small: 2px !default;
+$radius: 4px !default;
+$radius-large: 6px !default;
+$radius-rounded: 290486px !default;
+$speed: 86ms !default;
+$border: 1px !default;
+
+/* Responsiveness */
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 64px !default;
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px !default;
+// 960px container + 4rem
+$desktop: 960px + (2 * $gap) !default;
+// 1152px container + 4rem
+$widescreen: 1152px + (2 * $gap) !default;
+$widescreen-enabled: true !default;
+// 1344px container + 4rem
+$fullhd: 1344px + (2 * $gap) !default;
+$fullhd-enabled: true !default;
+
+/* Flags */
+$variable-columns: true !default
+    

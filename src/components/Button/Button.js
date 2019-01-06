@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types'; 
 
 export const Button = ({children, onClick, disabled, state}) => {
@@ -7,7 +7,7 @@ export const Button = ({children, onClick, disabled, state}) => {
       );
 }
 
-Button.PropTypes = {
+Button.propTypes = {
     onClick: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
     state: PropTypes.string

@@ -1,0 +1,14 @@
+.icon-list-items {
+    display: inline-block;
+    width: 20%;
+    margin-bottom: 10px;
+    .icon {
+        width: 24px;
+        height: 24px;
+        fill: red;
+    }
+    .icon-list-name {
+        margin-left: 10px;
+        vertical-align: super;
+    }
+}

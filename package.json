@@ -42,9 +42,10 @@
     "build-storybook": "build-storybook -s public",
     "deploy-storybook": "storybook-to-ghpages",
     "build:scss": "cpx \"./src/components/**/*.scss\" ./lib",
+    "build:icons": "cpx \"./src/components/*.svg\" ./lib",
     "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib",
     "prebuild:lib": "rimraf lib",
-    "build:lib": "npm run build:commonjs && npm run build:scss",
+    "build:lib": "npm run build:commonjs && npm run build:scss && npm run build:icons",
     "postversion": "git push && git push --tags",
     "prepublish": "npm run build:lib",
     "sync-ghpages": "git checkout gh-pages && git rebase master && git push origin gh-pages && git checkout master"

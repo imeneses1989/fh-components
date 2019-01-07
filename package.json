@@ -1,6 +1,6 @@
 {
   "name": "fht-components",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "./lib/index.js",
   "homepage": "https://imeneses1989.github.io/fh-components/",
   "engines": {

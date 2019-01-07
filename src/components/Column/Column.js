@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../../styles/grid/columns.scss'; 
+import '../styles/grid/columns.scss'; 
 
 export const Column = (props) => {
     const {

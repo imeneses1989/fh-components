@@ -17,4 +17,3 @@ Button.defaultProps = {
     disabled: false,
     state: 'primary'
 }
-

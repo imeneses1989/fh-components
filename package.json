@@ -46,7 +46,8 @@
     "prebuild:lib": "rimraf lib",
     "build:lib": "npm run build:commonjs && npm run build:scss",
     "postversion": "git push && git push --tags",
-    "prepublish": "npm run build:lib"
+    "prepublish": "npm run build:lib",
+    "sync-ghpages": "git checkout gh-pages && git rebase master && git push origin gh-pages && git checkout master"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from './components/Card/Card';
 
 import Recipes from './components/Card/CardInfo';
+import image from './components/styles/images/paella.jpg';
 
 class App extends Component {
 
@@ -20,6 +21,7 @@ class App extends Component {
           date={card.date}
           excerpt={card.excerpt}
           text={card.method}
+          image={image}
         />
       </div>
     );

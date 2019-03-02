@@ -5,7 +5,7 @@ import ButtonLike from '../Buttons/ButtonLike';
 import ButtonShare from '../Buttons/ButtonShare';
 import CardText from '../CardText/CardText';
 
-import { Transition } from 'react-transition-group';
+// import { Transition } from 'react-transition-group';
 
 import './Card.css';
 
@@ -39,7 +39,7 @@ class Card extends Component {
                     </div>
                 </div>
                 <div className="card-body">
-                    <div className="card-body-image">
+                    <div className="card-body-image" style={{backgroundImage: `url(${this.props.image})`}}>
                     </div>
                     <div className="card-body-excerpt">
                         <p>{this.props.excerpt}</p>
@@ -56,13 +56,14 @@ class Card extends Component {
                         <ButtonExpand click={this.expandClicked} expanded={this.state.cardExpanded} />
                     </div>
                 </div>     
-                <Transition
+                {text}
+                {/* <Transition
                     in={cardExpanded}
                     timeout={1000}
                     unmountOnExit
                     >
                     <CardText text={this.props.text} />
-                </Transition>
+                </Transition> */}
             </div>
         );
     }

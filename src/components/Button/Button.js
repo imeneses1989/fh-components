@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types'; 
 
-export const Button = ({children, onClick, disabled, state}) => {
+const Button = (props) => {
     return (
-        <button className={state} disabled={disabled} onMouseDown={onClick}>{children}</button>
+        <button className={props.state}
+            disabled={props.disabled}
+            onMouseDown={props.onClick}>
+            {props.children}
+         </button>
       );
 }
 
@@ -17,3 +21,5 @@ Button.defaultProps = {
     disabled: false,
     state: 'primary'
 }
+
+export default Button;

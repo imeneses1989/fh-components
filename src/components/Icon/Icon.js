@@ -4,12 +4,14 @@ import './Icon.scss';
 import '../icons.svg';
 
 export const Icon = (props) => {
+
     const {
         onClick,
         state,
         icon,
         className
     } = props;
+
     const iconPath = `#icons_${icon}`;
     return (
         <svg className={`icon ${className} ${state}`} onClick={onClick}><use xlinkHref={iconPath} /></svg>

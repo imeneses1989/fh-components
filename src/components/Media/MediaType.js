@@ -11,7 +11,7 @@ export const MediaType = (props) => {
     } = props;
     return (
         <Component className={`${className} media-${type}`}>{children}</Component>
-      );
+    );
 }
 
 MediaType.propTypes = {

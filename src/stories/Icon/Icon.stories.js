@@ -7,10 +7,6 @@ import IconList from '../../util/IconList';
 
 const stories = storiesOf('Icon', module);
 
-
-
-
-
 stories
   .add('Example: outline-account-box-24px', () => (
     <Icon icon={text('icon', 'outline-account-box-24px')}

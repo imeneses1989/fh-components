@@ -1,0 +1,38 @@
+/* Ripple effect */
+
+.ripple {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    background-position: center;
+    transition: background 0.6s;
+    &:hover {
+      background: #e7e7e7 radial-gradient(circle, transparent 1%, #e7e7e7 1%) (center / 15000%);
+    }
+    &:active {
+      background-color: #cecece;
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+  
+  .ripple {
+    > svg {
+      display: flex;
+      align-items: center;
+      justify-content: inherit;
+      width: 1.2em;
+      height: 1.2em;
+      font-size: 26px;
+      color: rgba(0, 0, 0, 0.54);
+      fill: currentColor;
+      padding: 4px;
+    }
+  }

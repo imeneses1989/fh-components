@@ -1,76 +1,102 @@
 import React, { Component } from 'react';
-import ButtonOptions from '../Buttons/ButtonOptions';
-import ButtonExpand from '../Buttons/ButtonExpand';
-import ButtonLike from '../Buttons/ButtonLike';
-import ButtonShare from '../Buttons/ButtonShare';
-import CardText from '../CardText/CardText';
 
-// import { Transition } from 'react-transition-group';
+import ButtonIcon from '../ButtonIcon/ButtonIcon';
+import CardText from './CardText';
 
-import './Card.css';
+import { Icon } from 'fht-components/Icon/Icon';
+import { text } from '@storybook/addon-knobs';
+
+import './Card.scss';
 
 import PropTypes from 'prop-types';
 
-class Card extends Component {
+export default class Card extends Component {
 
     state = {
         cardExpanded: false,
     }
 
     expandClicked = () => {
-        this.setState({ cardExpanded: !this.state.cardExpanded });
+        this.setState((prevState) => { return { cardExpanded: !prevState.cardExpanded} })
     }
 
     render() {
 
-        const { cardExpanded } = this.state;
-        let text = this.state.cardExpanded ? <CardText text={this.props.text}/> : null;
+        const {
+            content,
+            title,
+            date,
+            excerpt,
+            onMoreClicked,
+            onLikeClicked,
+            onShareClicked,
+        } = this.props;
+
+        let cardContent = this.state.cardExpanded ? <CardText content={content}/> : null;
 
         return (
             <div className="card">
                 <div className="card-header">
                     <div className="card-header-icon">R</div>
                     <div className="card-header-info">
-                        <span className="card-title">{this.props.title}</span>
-                        <span className="card-date">{this.props.date}</span>
+                        <span className="card-title">{title}</span>
+                        <span className="card-date">{date}</span>
                     </div>
                     <div className="card-header-options">
-                        <ButtonOptions />
+                        <ButtonIcon
+                            disabled={false}
+                            onClick={onMoreClicked}>
+                            <Icon icon={text('icon', 'outline-more-vert-24px')} />
+                        </ButtonIcon>
                     </div>
                 </div>
                 <div className="card-body">
-                    <div className="card-body-image" style={{backgroundImage: `url(${this.props.image})`}}>
+                    {/* <div className="card-body-image" style={{backgroundImage: `url(${image})`}}> */}
+                    <div className="card-body-image">
                     </div>
                     <div className="card-body-excerpt">
-                        <p>{this.props.excerpt}</p>
+                        <p>{excerpt}</p>
                     </div>
                  </div>
                  <div className="card-footer">
                     <div className="card-footer-like">
-                        <ButtonLike />
+                        <ButtonIcon
+                            disabled={false}
+                            onClick={onLikeClicked}>
+                            <Icon icon={text('icon', 'outline-favorite-24px')} />
+                        </ButtonIcon>
                     </div>
                     <div className="card-footer-share">
-                        <ButtonShare />
+                        <ButtonIcon
+                            disabled={false}
+                            onClick={onShareClicked}>
+                            <Icon icon={text('icon', 'outline-share-24px')} />
+                        </ButtonIcon>
                     </div>
                     <div className="card-footer-expand">
-                        <ButtonExpand click={this.expandClicked} expanded={this.state.cardExpanded} />
+                        <ButtonIcon
+                            disabled={false}
+                            onClick={this.expandClicked}>
+                            <Icon
+                                icon={text('icon', 'outline-expand-more-24px')}
+                                className={`is-24x24 ${this.state.cardExpanded ? 'rotate180' : ''}`}/>
+                        </ButtonIcon>
                     </div>
                 </div>     
-                {text}
-                {/* <Transition
-                    in={cardExpanded}
-                    timeout={1000}
-                    unmountOnExit
-                    >
-                    <CardText text={this.props.text} />
-                </Transition> */}
+                {cardContent}
             </div>
         );
     }
 }
 
-Card.propTypes = {
+ButtonIcon.propTypes = {
+    disabled: PropTypes.bool,
+    content: PropTypes.string,
+    // title: PropTypes.string.isRequired, 
+    // date: PropTypes.string.isRequired,
+    excerpt: PropTypes.string,
+}
 
-};
-
-export default Card;
+ButtonIcon.defaultProps = {
+    disabled: false,
+}

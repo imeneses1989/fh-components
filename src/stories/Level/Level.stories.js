@@ -10,17 +10,17 @@ stories
     <Level>
         <LevelType type="left">
             <LevelType type="item">
-                <p class="subtitle is-5">
+                <p className="subtitle is-5">
                     <strong>123</strong> posts
                 </p>
             </LevelType>
         </LevelType>
         <LevelType type="right">
             <LevelType type="item" as="p"><strong>All</strong></LevelType>
-            <LevelType type="item" as="p"><a>Published</a></LevelType>
-            <LevelType type="item" as="p"><a>Drafts</a></LevelType>
-            <LevelType type="item" as="p"><a>Deleted</a></LevelType>
-            <LevelType type="item" as="p"><a class="button is-success">New</a></LevelType>
+            <LevelType type="item" as="p"><a href="/">Published</a></LevelType>
+            <LevelType type="item" as="p"><a href="/">Drafts</a></LevelType>
+            <LevelType type="item" as="p"><a href="/">Deleted</a></LevelType>
+            <LevelType type="item" as="p"><a href="/" className="button is-success" >New</a></LevelType>
         </LevelType>
     </Level>
   ))
@@ -28,26 +28,26 @@ stories
     <Level>
         <LevelType type="item" centered>
             <div>
-                <p class="heading">Following</p>
-                <p class="title">123</p>
+                <p className="heading">Following</p>
+                <p className="title">123</p>
             </div>
         </LevelType>
         <LevelType type="item" centered>
             <div>
-                <p class="heading">Following</p>
-                <p class="title">123</p>
+                <p className="heading">Following</p>
+                <p className="title">123</p>
             </div>
         </LevelType>
         <LevelType type="item" centered>
             <div>
-                <p class="heading">Following</p>
-                <p class="title">123</p>
+                <p className="heading">Following</p>
+                <p className="title">123</p>
             </div>
         </LevelType>
         <LevelType type="item" centered>
             <div>
-                <p class="heading">Following</p>
-                <p class="title">123</p>
+                <p className="heading">Following</p>
+                <p className="title">123</p>
             </div>
         </LevelType>
     </Level>

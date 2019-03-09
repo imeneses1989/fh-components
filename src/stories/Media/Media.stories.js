@@ -3,8 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { Media } from 'fht-components/Media/Media';
 import { MediaType } from 'fht-components/Media/MediaType';
 import { Icon } from 'fht-components/Icon/Icon';
-import '../../styles/elements/content.scss';
-import '../../styles/elements/image.scss';
 
 const stories = storiesOf('Media', module);
 
@@ -12,8 +10,8 @@ stories
   .add('With Left-Right-content', () => (
     <Media>
         <MediaType type="left" as="figure">
-            <p class="image is-64x64">
-                <img src="https://bulma.io/images/placeholders/128x128.png"/>
+            <p className="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/128x128.png" alt="placeholder"/>
             </p>
         </MediaType>
         <MediaType type="content">
